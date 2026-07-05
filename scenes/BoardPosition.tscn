@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/board_position.gd" id="1_board_position"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_click"]
+size = Vector2(104, 104)
+
+[node name="BoardPosition" type="Node2D"]
+script = ExtResource("1_board_position")
+
+[node name="IconSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+
+[node name="StarSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(26, -26)
+scale = Vector2(0.72, 0.72)
+
+[node name="TileLabel" type="Label" parent="."]
+mouse_filter = 2
+offset_left = -44.0
+offset_top = 48.0
+offset_right = 44.0
+offset_bottom = 84.0
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+shape = SubResource("RectangleShape2D_click")

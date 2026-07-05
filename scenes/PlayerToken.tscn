@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_token.gd" id="1_player_token"]
+
+[node name="PlayerToken" type="Node2D"]
+script = ExtResource("1_player_token")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.65, 1.65)
+hframes = 2
+
+[node name="CelebrationParticles" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 24
+lifetime = 0.7
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(0, -1)
+spread = 180.0
+gravity = Vector2(0, 240)
+initial_velocity_min = 80.0
+initial_velocity_max = 160.0
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+color = Color(1, 0.9, 0.35, 1)
+
+[node name="NameLabel" type="Label" parent="."]
+mouse_filter = 2
+offset_left = -42.0
+offset_top = 18.0
+offset_right = 42.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1

@@ -1,0 +1,11 @@
+Sound credits
+
+star_collect.ogg
+  From the "Digital Audio" pack (powerUp5.ogg) by Kenney Vleugels.
+  https://kenney.nl/assets/digital-audio
+  License: Creative Commons Zero (CC0) - free for any use, no credit required.
+  https://creativecommons.org/publicdomain/zero/1.0/
+
+Looking for more free sounds for your own tiles?
+  https://kenney.nl/assets?category=audio (all CC0)
+  Download a pack, then drop the .ogg files into this folder.

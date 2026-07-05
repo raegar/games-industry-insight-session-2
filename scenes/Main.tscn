@@ -1,0 +1,309 @@
+[gd_scene format=3 uid="uid://cn4o0i4eomvnf"]
+
+[ext_resource type="Script" uid="uid://c8lbke5jv0rg4" path="res://scripts/game_manager.gd" id="1_game_manager"]
+[ext_resource type="PackedScene" path="res://scenes/BoardPosition.tscn" id="2_board_position"]
+[ext_resource type="PackedScene" path="res://scenes/PlayerToken.tscn" id="3_player_token"]
+[ext_resource type="Texture2D" uid="uid://bid1lu1bu7nuf" path="res://assets/sprites/player_blue.png" id="4_player_blue"]
+[ext_resource type="Texture2D" uid="uid://nct8ig84i1gd" path="res://assets/sprites/player_pink.png" id="5_player_pink"]
+[ext_resource type="Texture2D" uid="uid://bvgdd601p6wkk" path="res://assets/images/spacebg.png" id="6_spacebg"]
+[ext_resource type="Script" uid="uid://cldfkwo284ket" path="res://scripts/board_path.gd" id="7_board_path"]
+[ext_resource type="AudioStream" uid="uid://cb2j1lhrv00gy" path="res://assets/sounds/star_collect.ogg" id="8_star_collect"]
+
+[node name="Main" type="Node2D" unique_id=1710332234]
+script = ExtResource("1_game_manager")
+
+[node name="SpaceBackground" type="TextureRect" parent="." unique_id=1142979125]
+modulate = Color(0.68, 0.7, 0.82, 1)
+offset_right = 1600.0
+offset_bottom = 900.0
+mouse_filter = 2
+texture = ExtResource("6_spacebg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BoardPath" type="Node2D" parent="." unique_id=576690121]
+script = ExtResource("7_board_path")
+
+[node name="Board" type="Node2D" parent="." unique_id=1978374267]
+
+[node name="Tile00" parent="Board" unique_id=1342931005 instance=ExtResource("2_board_position")]
+position = Vector2(116, 275)
+
+[node name="Tile01" parent="Board" unique_id=2013487110 instance=ExtResource("2_board_position")]
+position = Vector2(233, 231)
+tile_index = 1
+tile_type = 1
+move_forward_amount = 2
+
+[node name="Tile02" parent="Board" unique_id=1564743145 instance=ExtResource("2_board_position")]
+position = Vector2(359, 253)
+tile_index = 2
+has_star_token = true
+
+[node name="Tile03" parent="Board" unique_id=389907047 instance=ExtResource("2_board_position")]
+position = Vector2(485, 210)
+tile_index = 3
+tile_type = 5
+
+[node name="Tile04" parent="Board" unique_id=351027653 instance=ExtResource("2_board_position")]
+position = Vector2(611, 238)
+tile_index = 4
+tile_type = 2
+jump_target_index = 10
+
+[node name="Tile05" parent="Board" unique_id=1630622903 instance=ExtResource("2_board_position")]
+position = Vector2(737, 195)
+tile_index = 5
+
+[node name="Tile06" parent="Board" unique_id=1005680179 instance=ExtResource("2_board_position")]
+position = Vector2(863, 231)
+tile_index = 6
+tile_type = 4
+
+[node name="Tile07" parent="Board" unique_id=1850677381 instance=ExtResource("2_board_position")]
+position = Vector2(989, 210)
+tile_index = 7
+tile_type = 1
+move_forward_amount = 3
+
+[node name="Tile08" parent="Board" unique_id=1959869040 instance=ExtResource("2_board_position")]
+position = Vector2(1115, 261)
+tile_index = 8
+tile_type = 3
+has_star_token = true
+
+[node name="Tile09" parent="Board" unique_id=485473530 instance=ExtResource("2_board_position")]
+position = Vector2(1241, 238)
+tile_index = 9
+
+[node name="Tile10" parent="Board" unique_id=124665922 instance=ExtResource("2_board_position")]
+position = Vector2(1367, 297)
+tile_index = 10
+tile_type = 5
+
+[node name="Tile11" parent="Board" unique_id=1823491951 instance=ExtResource("2_board_position")]
+position = Vector2(1467, 384)
+tile_index = 11
+
+[node name="Tile12" parent="Board" unique_id=963938749 instance=ExtResource("2_board_position")]
+position = Vector2(1385, 479)
+tile_index = 12
+tile_type = 1
+move_forward_amount = 2
+
+[node name="Tile13" parent="Board" unique_id=551915721 instance=ExtResource("2_board_position")]
+position = Vector2(1259, 456)
+tile_index = 13
+tile_type = 2
+jump_target_index = 17
+
+[node name="Tile14" parent="Board" unique_id=1205019196 instance=ExtResource("2_board_position")]
+position = Vector2(1141, 515)
+tile_index = 14
+tile_type = 5
+has_star_token = true
+
+[node name="Tile15" parent="Board" unique_id=599668047 instance=ExtResource("2_board_position")]
+position = Vector2(1016, 479)
+tile_index = 15
+
+[node name="Tile16" parent="Board" unique_id=551134534 instance=ExtResource("2_board_position")]
+position = Vector2(899, 537)
+tile_index = 16
+tile_type = 4
+
+[node name="Tile17" parent="Board" unique_id=702744194 instance=ExtResource("2_board_position")]
+position = Vector2(773, 501)
+tile_index = 17
+tile_type = 3
+
+[node name="Tile18" parent="Board" unique_id=551086200 instance=ExtResource("2_board_position")]
+position = Vector2(647, 559)
+tile_index = 18
+
+[node name="Tile19" parent="Board" unique_id=79241962 instance=ExtResource("2_board_position")]
+position = Vector2(521, 522)
+tile_index = 19
+tile_type = 1
+move_forward_amount = 4
+
+[node name="Tile20" parent="Board" unique_id=172368800 instance=ExtResource("2_board_position")]
+position = Vector2(404, 580)
+tile_index = 20
+has_star_token = true
+
+[node name="Tile21" parent="Board" unique_id=1550732755 instance=ExtResource("2_board_position")]
+position = Vector2(287, 544)
+tile_index = 21
+tile_type = 5
+
+[node name="Tile22" parent="Board" unique_id=1737961760 instance=ExtResource("2_board_position")]
+position = Vector2(171, 602)
+tile_index = 22
+tile_type = 2
+jump_target_index = 28
+
+[node name="Tile23" parent="Board" unique_id=1500192336 instance=ExtResource("2_board_position")]
+position = Vector2(80, 697)
+tile_index = 23
+
+[node name="Tile24" parent="Board" unique_id=1486528564 instance=ExtResource("2_board_position")]
+position = Vector2(197, 777)
+tile_index = 24
+tile_type = 4
+
+[node name="Tile25" parent="Board" unique_id=263694754 instance=ExtResource("2_board_position")]
+position = Vector2(323, 740)
+tile_index = 25
+tile_type = 1
+move_forward_amount = 2
+
+[node name="Tile26" parent="Board" unique_id=2089227399 instance=ExtResource("2_board_position")]
+position = Vector2(449, 792)
+tile_index = 26
+tile_type = 3
+
+[node name="Tile27" parent="Board" unique_id=1386314587 instance=ExtResource("2_board_position")]
+position = Vector2(575, 747)
+tile_index = 27
+has_star_token = true
+
+[node name="Tile28" parent="Board" unique_id=183828920 instance=ExtResource("2_board_position")]
+position = Vector2(701, 806)
+tile_index = 28
+tile_type = 5
+
+[node name="Tile29" parent="Board" unique_id=1037230427 instance=ExtResource("2_board_position")]
+position = Vector2(827, 762)
+tile_index = 29
+
+[node name="Tile30" parent="Board" unique_id=1332987727 instance=ExtResource("2_board_position")]
+position = Vector2(953, 813)
+tile_index = 30
+tile_type = 2
+jump_target_index = 4
+
+[node name="Tile31" parent="Board" unique_id=861086595 instance=ExtResource("2_board_position")]
+position = Vector2(1079, 770)
+tile_index = 31
+tile_type = 1
+move_forward_amount = 3
+
+[node name="Tile32" parent="Board" unique_id=1369038928 instance=ExtResource("2_board_position")]
+position = Vector2(1205, 820)
+tile_index = 32
+
+[node name="Tile33" parent="Board" unique_id=1665092043 instance=ExtResource("2_board_position")]
+position = Vector2(1331, 762)
+tile_index = 33
+tile_type = 4
+has_star_token = true
+
+[node name="Tile34" parent="Board" unique_id=80305563 instance=ExtResource("2_board_position")]
+position = Vector2(1448, 697)
+tile_index = 34
+tile_type = 5
+
+[node name="Tile35" parent="Board" unique_id=181791002 instance=ExtResource("2_board_position")]
+position = Vector2(1520, 588)
+tile_index = 35
+tile_type = 1
+move_forward_amount = 2
+
+[node name="Players" type="Node2D" parent="." unique_id=1418811306]
+
+[node name="PlayerOne" parent="Players" unique_id=69555125 instance=ExtResource("3_player_token")]
+player_name = "Player 1"
+player_colour = Color(0.6, 0.9, 1, 1)
+player_sprite = ExtResource("4_player_blue")
+
+[node name="PlayerTwo" parent="Players" unique_id=1629196406 instance=ExtResource("3_player_token")]
+player_name = "Player 2"
+player_colour = Color(1, 0.55, 0.85, 1)
+player_sprite = ExtResource("5_player_pink")
+
+[node name="StarSound" type="AudioStreamPlayer" parent="." unique_id=125871110]
+stream = ExtResource("8_star_collect")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1902719091]
+
+[node name="TopPanel" type="Panel" parent="UI" unique_id=1963512760]
+offset_right = 1600.0
+offset_bottom = 138.0
+mouse_filter = 2
+
+[node name="TurnLabel" type="Label" parent="UI" unique_id=702586114]
+offset_left = 20.0
+offset_top = 14.0
+offset_right = 380.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 26
+text = "Turn: Player 1"
+
+[node name="DiceLabel" type="Label" parent="UI" unique_id=532677400]
+offset_left = 440.0
+offset_top = 18.0
+offset_right = 610.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 24
+text = "Dice: -"
+
+[node name="PlayerOneLabel" type="Label" parent="UI" unique_id=1439271978]
+offset_left = 20.0
+offset_top = 66.0
+offset_right = 520.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 18
+text = "Player 1  Stars: 0/3  Lives: 3  Tile: 0"
+
+[node name="PlayerTwoLabel" type="Label" parent="UI" unique_id=483827112]
+offset_left = 20.0
+offset_top = 100.0
+offset_right = 520.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 18
+text = "Player 2  Stars: 0/3  Lives: 3  Tile: 18"
+
+[node name="StatusLabel" type="Label" parent="UI" unique_id=2053896971]
+offset_left = 650.0
+offset_top = 66.0
+offset_right = 1570.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 18
+text = "Choose two squares to swap, or roll now."
+autowrap_mode = 2
+
+[node name="RollButton" type="Button" parent="UI" unique_id=1597522477]
+offset_left = 1135.0
+offset_top = 16.0
+offset_right = 1255.0
+offset_bottom = 54.0
+text = "Roll"
+
+[node name="SkipSwapButton" type="Button" parent="UI" unique_id=1837376063]
+offset_left = 1270.0
+offset_top = 16.0
+offset_right = 1410.0
+offset_bottom = 54.0
+text = "Skip Swap"
+
+[node name="ResetButton" type="Button" parent="UI" unique_id=583883507]
+offset_left = 1425.0
+offset_top = 16.0
+offset_right = 1555.0
+offset_bottom = 54.0
+text = "Reset"
+
+[node name="TileTooltipPanel" type="PanelContainer" parent="UI" unique_id=1635683803]
+visible = false
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 174.0
+offset_bottom = 92.0
+mouse_filter = 2
+
+[node name="TileTooltipLabel" type="Label" parent="UI/TileTooltipPanel" unique_id=1929114987]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Tile 00
+Quiet Space"
