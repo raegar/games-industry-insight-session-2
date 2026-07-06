@@ -21,10 +21,10 @@ enum TileType {
 	HAZARD
 }
 
-# EDIT ME: This number decides the order players travel around the board.
+# This number decides the order players travel around the board.
 @export var tile_index: int = 0
 
-# EDIT ME: Change this to make a square do something different.
+# This is the default tile type
 # The "set(value):" block is a setter - it runs every time the value changes
 # (even from the editor Inspector), so the tile instantly redraws itself.
 @export var tile_type: TileType = TileType.NORMAL:
@@ -32,19 +32,19 @@ enum TileType {
 		tile_type = value
 		update_visuals()
 
-# EDIT ME: Used when tile_type is MOVE_FORWARD.
+# Used when tile_type is MOVE_FORWARD.
 @export var move_forward_amount: int = 0:
 	set(value):
 		move_forward_amount = value
 		update_visuals()
 
-# EDIT ME: Used when tile_type is JUMP.
+# Used when tile_type is JUMP.
 @export var jump_target_index: int = 0:
 	set(value):
 		jump_target_index = value
 		update_visuals()
 
-# EDIT ME: Turn this on to place a collectible star on this board position.
+# Turn this on in the 2D editor to place a collectible star on this board position.
 @export var has_star_token: bool = false:
 	set(value):
 		has_star_token = value

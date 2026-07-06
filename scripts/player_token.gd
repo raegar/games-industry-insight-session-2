@@ -14,6 +14,10 @@ extends Node2D
 @export var lives: int = 3
 @export var player_sprite: Texture2D
 
+# TWEAK ME: how long (in seconds) each walking frame shows while a token moves.
+# Smaller = faster-shuffling legs, larger = a slow plod. Try 0.1 (fast) or 1.0 (slow) and run!
+const STEP_FRAME_TIME := 0.5
+
 # $Name fetches a child node from PlayerToken.tscn. "@onready" waits until
 # the scene is fully loaded before looking - otherwise the nodes would not
 # exist yet and the game would crash.
@@ -43,14 +47,15 @@ func _draw() -> void:
 
 func _process(delta: float) -> void:
 	# _process runs every frame; delta is the time since the previous frame.
-	# While moving, switch between the two sprite-sheet frames every 0.5 seconds.
+	# While moving, switch between the two sprite-sheet frames every
+	# STEP_FRAME_TIME seconds.
 	if not is_moving:
 		return
 
 	moving_animation_time += delta
-	# Divide the total time by 0.5 and keep the remainder of / 2:
+	# Divide the total time by STEP_FRAME_TIME and keep the remainder of / 2:
 	# the answer flips 0, 1, 0, 1... which picks the walking frame.
-	sprite.frame = int(moving_animation_time / 0.5) % 2
+	sprite.frame = int(moving_animation_time / STEP_FRAME_TIME) % 2
 
 
 func update_visuals() -> void:

@@ -30,7 +30,7 @@ const PLAYER_TILE_OFFSETS := [
 @onready var reset_button: Button = $UI/ResetButton
 @onready var tile_tooltip_panel: PanelContainer = $UI/TileTooltipPanel
 @onready var tile_tooltip_label: Label = $UI/TileTooltipPanel/TileTooltipLabel
-# STUDENT EXTENSION SPACE: doing Worksheet 2 (Add Sound Effects To Tiles)?
+# STUDENT EXTENSION SPACE: adding sound effects to tiles?
 # Add your new AudioStreamPlayer variables right below star_sound.
 @onready var star_sound: AudioStreamPlayer = $StarSound
 
@@ -116,7 +116,7 @@ func begin_turn() -> void:
 	_update_ui()
 
 
-# STUDENT EXTENSION SPACE: doing Worksheet 1 (Show More Game Info On Screen)?
+# STUDENT EXTENSION SPACE: showing more game info on screen?
 # Add your new label updates at the bottom of this function.
 func _update_ui() -> void:
 	var current_player := _current_player()
@@ -303,7 +303,7 @@ func resolve_landed_tile(tile: BoardPosition, chain_depth: int = 0) -> void:
 			player.play_celebration()
 			status_label.text = "%s gained a life." % player.player_name
 		BoardPosition.TileType.HAZARD:
-			# STUDENT EXTENSION SPACE: Worksheet 4 (Battle To Dodge Hazards) starts here.
+			# STUDENT EXTENSION SPACE: the Battle To Dodge Hazards worksheet starts here.
 			# max(0, ...) stops lives going below zero.
 			player.lives = max(0, player.lives - 1)
 			status_label.text = "%s hit a hazard and lost a life." % player.player_name
